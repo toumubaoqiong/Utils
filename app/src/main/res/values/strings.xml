@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Utils</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_marquee_text_view">MarqueeTextView</string>
+</resources>
