@@ -9,7 +9,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 /**
- * 显示信息类 用于显示提示信息、打印信息等
+ *description:显示信息类 用于显示提示信息、打印信息等
+ *author:vince
  */
 public class DebugPrint {
     public static final String TAG = "SynMath";
