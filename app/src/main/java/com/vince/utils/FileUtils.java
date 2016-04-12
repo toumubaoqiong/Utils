@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Environment;
 import android.os.StatFs;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -337,5 +338,35 @@ public class FileUtils {
         }
 
         return srcFile.renameTo(new File(destDirName + File.separator + srcFile.getName()));
+    }
+
+
+    //获取文件名（不含后缀）
+    public static String getFileNameNoEx(String allSavePath) {
+        File targetFile = new File(allSavePath);
+        String filename = targetFile.getName();
+        Log.d("FileExtractorUtils", "getFileNameNoEx : " + filename);
+        if(filename != null && filename.length() > 0) {
+            int dot = filename.lastIndexOf(46);
+            if(dot > -1 && dot < filename.length()) {
+                return filename.substring(0, dot);
+            }
+        }
+
+        return filename;
+    }
+
+
+    //获取文件的当前目录
+    public static String getTargetPath(String savePath) {
+        if(savePath != null && savePath.length() > 0) {
+            int start = savePath.indexOf(47);
+            int end = savePath.lastIndexOf(47);
+            if(end > -1 && end < savePath.length() - 1) {
+                return savePath.substring(start, end + 1);
+            }
+        }
+
+        return savePath;
     }
 }
