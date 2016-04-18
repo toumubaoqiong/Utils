@@ -14,6 +14,7 @@ public class FastClickUtils {
         long time = System.currentTimeMillis();
         long timeD = time - mLastClickTime;
         if(0L < timeD && timeD < 500L) {
+            mLastClickTime = time;
             return true;
         } else {
             mLastClickTime = time;
