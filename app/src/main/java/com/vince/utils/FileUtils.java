@@ -6,6 +6,7 @@ import android.os.StatFs;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -368,5 +369,55 @@ public class FileUtils {
         }
 
         return savePath;
+    }
+
+    /**
+     * 获取文件扩展名
+     *
+     * @param fileName
+     * @return
+     * @create_date 2014-10-8 上午11:58:18
+     */
+    public static String getFileExtension(String fileName) {
+        return fileName.substring(fileName.lastIndexOf(".") + 1);
+    }
+
+    public static void bytesToImgSave(byte[] bytes, String imgFile)
+            throws Exception {
+        // UUID序列号作为保存图片的名称
+
+        File f = new File(imgFile);
+
+        try {
+            DataOutputStream out = new DataOutputStream(new FileOutputStream(f));
+            for (int i = 0; i < bytes.length; i++) {
+                out.write(bytes[i]);
+            }
+            out.flush();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @param @param realPath
+     * @return void
+     * @Title: deleteFile
+     * @Description: 删除文件或文件夹
+     */
+    public static void deleteFile(String realPath) {
+        File file = new File(realPath);
+        if (file.isFile() && file.exists()) {
+            file.delete();
+        } else {
+            if (file.isDirectory()) {
+                File[] files = file.listFiles();
+                for (int i = 0; i < files.length; i++) {
+                    files[i].delete();
+                }
+            }
+            file.delete();
+        }
     }
 }
