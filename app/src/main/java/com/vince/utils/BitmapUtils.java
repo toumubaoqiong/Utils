@@ -16,7 +16,6 @@ import java.util.Arrays;
 /**
  * decription ：
  * author ： vince
- * Created at 2016/4/18.
  */
 public class BitmapUtils {
 

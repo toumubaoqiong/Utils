@@ -11,8 +11,7 @@ import java.io.InputStream;
 
 /**
  * decription ：
- * author ： zhua
- * Created at 2016/4/18.
+ * author ： vince
  */
 public class AssertUtils {
 

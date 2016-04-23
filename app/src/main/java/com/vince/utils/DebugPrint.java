@@ -13,7 +13,7 @@ import android.widget.Toast;
  *author:vince
  */
 public class DebugPrint {
-    public static final String TAG = "SynMath";
+    public static final String TAG = "DebugPrint";
 
     private DebugPrint() {
         // 避免被外部实例化
