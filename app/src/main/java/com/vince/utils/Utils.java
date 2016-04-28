@@ -1,9 +1,12 @@
 package com.vince.utils;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+
+import java.util.List;
 
 /**
  * decription ：获取AndroidManifest.xml中配置数据
@@ -54,8 +57,32 @@ public class Utils {
         return versionName;
     }
 
-
-
-
-
+    /**
+     * 可以启动额外进程时，重复初始化
+     */
+    /*
+    String processName = OsUtils.getProcessName(this,
+            android.os.Process.myPid());
+    L.d(WModel.Time, "进程名称"+processName);
+    if (processName != null) {
+        boolean defaultProcess = processName
+                .equals(WMapConstants.REAL_PACKAGE_NAME);
+        if (defaultProcess) {
+            //必要的初始化资源操作
+        }
+    }
+    */
+    public static String getProcessName(Context cxt, int pid) {
+        ActivityManager am = (ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> runningApps = am.getRunningAppProcesses();
+        if (runningApps == null) {
+            return null;
+        }
+        for (ActivityManager.RunningAppProcessInfo procInfo : runningApps) {
+            if (procInfo.pid == pid) {
+                return procInfo.processName;
+            }
+        }
+        return null;
+    }
 }
