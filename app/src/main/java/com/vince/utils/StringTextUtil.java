@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 /**
  *description:文本显示处理相关工具类
- *author:vince
+ *@author:vince
  */
 public class StringTextUtil {
 	private static Toast mToast = null;

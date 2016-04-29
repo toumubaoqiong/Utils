@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 /**
  * description:文件操作类（SD卡上的检查文件是否存在、创建目录、创建文件、删除文件、删除文件夹、目录移动、文件移动等操作）
- * author:vince
+ * @author:vince
  */
 public class FileUtils {
     private FileUtils() {

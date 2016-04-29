@@ -4,7 +4,7 @@ import android.content.Context;
 
 /**
  *description:px、dp、sp
- *author:vince
+ *@author:vince
  */
 public class DensityUtil {
 

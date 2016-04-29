@@ -16,7 +16,7 @@ import android.text.format.Formatter;
 
 /**
  *description:获取手机信息工具类
- *author:vince
+ *@author:vince
  */
 public class PhoneUtil {
 

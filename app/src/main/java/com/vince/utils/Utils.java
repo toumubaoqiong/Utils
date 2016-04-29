@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * decription ：获取AndroidManifest.xml中配置数据
- * author ： vince
+ * @author ： vince
  */
 
 /*<meta-data//在Application里面中

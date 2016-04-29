@@ -2,7 +2,7 @@ package com.vince.utils;
 
 /**
  *description:判断是否进行双击
- *author:vince
+ *@author:vince
  */
 public class FastClickUtils {
     private static long mLastClickTime = 0L;

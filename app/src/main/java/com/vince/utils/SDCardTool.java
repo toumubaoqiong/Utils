@@ -7,7 +7,7 @@ import java.io.File;
 
 /**
  *description:sdCard工具类
- *author:vince
+ *@author:vince
  */
 public class SDCardTool {
 	// 允许保存文件操作的最小空间值

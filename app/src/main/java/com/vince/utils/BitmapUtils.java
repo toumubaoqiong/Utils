@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 /**
  * decription ：
- * author ： vince
+ * @author ： vince
  */
 public class BitmapUtils {
 

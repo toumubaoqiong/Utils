@@ -11,7 +11,7 @@ import android.util.Base64;
 
 /**
  *description:SharePreference数据存取工具类
- *author:vince
+ *@author:vince
  */
 public class SharePreferenceUtil {
 	private static final String TAG  = "SharePreferenceUtil";

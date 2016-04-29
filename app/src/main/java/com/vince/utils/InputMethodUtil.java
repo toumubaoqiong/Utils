@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 /**
  *description:输入法工具类
- *author:vince
+ *@author:vince
  */
 public class InputMethodUtil {
 	private InputMethodUtil(){
